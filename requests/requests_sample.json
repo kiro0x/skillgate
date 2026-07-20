@@ -1,0 +1,114 @@
+{
+  "version": "sample-1.0",
+  "note": "見本のみ。本走の問題セット（A/B/C 90問＋新問A2B3 60問＋D群15問）は再使用予定のため非公開。ground truthの確定は人間の目視承認による。",
+  "schema": {
+    "id": "群+連番",
+    "group": "A=起動すべき / B=起動すべきでない / C=特定セクションを読むべき",
+    "subtype": "A: 直球|言い換え|複数該当, B: トラップ語, C: 対象スキル",
+    "prompt": "モデルに渡す依頼文",
+    "expected": "起動すべきスキルID配列（B群は空配列）",
+    "accept_also": "正解扱いにしてよい代替（複数該当・統合/分割スキル対応）",
+    "expected_section": "C群のみ：参照すべき見出し",
+    "note": "作問意図"
+  },
+  "requests": [
+    {
+      "id": "A01",
+      "group": "A",
+      "subtype": "直球",
+      "prompt": "経費精算のチェックをお願い。3月分の申請5件を貼るので見て。",
+      "expected": [
+        "keihi-seisan"
+      ],
+      "accept_also": [],
+      "note": "説明文語彙と一致"
+    },
+    {
+      "id": "A02",
+      "group": "A",
+      "subtype": "直球",
+      "prompt": "この会議メモを議事録にして。",
+      "expected": [
+        "gijiroku-seikei"
+      ],
+      "accept_also": [],
+      "note": ""
+    },
+    {
+      "id": "A05",
+      "group": "A",
+      "subtype": "直球",
+      "prompt": "英単語テスト作って。Unit3の範囲で20問。",
+      "expected": [
+        "eitango-test"
+      ],
+      "accept_also": [],
+      "note": ""
+    },
+    {
+      "id": "B01",
+      "group": "B",
+      "subtype": "経費",
+      "prompt": "経費削減のアイデアを10個出して。",
+      "expected": [],
+      "accept_also": [],
+      "note": "keihi-seisanトラップ"
+    },
+    {
+      "id": "B02",
+      "group": "B",
+      "subtype": "議事録",
+      "prompt": "議事録って法的に保存義務あるの？",
+      "expected": [],
+      "accept_also": [],
+      "note": "知識質問"
+    },
+    {
+      "id": "B05",
+      "group": "B",
+      "subtype": "英単語",
+      "prompt": "英単語の語源で面白い話をいくつか教えて。",
+      "expected": [],
+      "accept_also": [],
+      "note": "eitango-testトラップ"
+    },
+    {
+      "id": "C01",
+      "group": "C",
+      "subtype": "keihi-seisan",
+      "prompt": "経費が科目の上限を超えてた場合、どう扱えばいい？",
+      "expected": [
+        "keihi-seisan"
+      ],
+      "accept_also": [],
+      "expected_section": "上限超過時の処理",
+      "note": ""
+    },
+    {
+      "id": "C02",
+      "group": "C",
+      "subtype": "keihi-seisan",
+      "prompt": "経費チェックの結果って、どういう形式で出すんだっけ。",
+      "expected": [
+        "keihi-seisan"
+      ],
+      "accept_also": [],
+      "expected_section": "出力形式",
+      "note": ""
+    },
+    {
+      "id": "D01",
+      "skill": "keihi-seisan",
+      "flags": [
+        "上限超過あり"
+      ],
+      "prompt": "経費精算のチェックをして。申請5件：①4/2 交際費15,000円 取引先会食 領収書あり ②4/5 消耗品3,200円 文具 領収書なし ③4/8 交通費880円 電車実費 ④4/10 消耗品1,500円 電池 領収書あり ⑤4/15 交際費8,000円 手土産 領収書あり 目的記載あり"
+    },
+    {
+      "id": "D02",
+      "skill": "keihi-seisan",
+      "flags": [],
+      "prompt": "経費精算のチェックをお願い。3件：①5/10 交通費1,240円 電車実費 ②5/12 消耗品2,000円 コピー用紙 領収書あり ③5/20 交際費9,500円 取引先昼食 領収書あり。目的欄は全部記載あり。"
+    }
+  ]
+}
