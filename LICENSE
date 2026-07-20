@@ -1,0 +1,35 @@
+SkillGate License
+
+Copyright (c) 2026 SkillGate Project
+
+Permission is granted to any person to use, study, and run this
+software for personal, educational, and non-commercial purposes,
+free of charge.
+
+The following actions require a separate commercial license:
+
+  1. Incorporating this software, in whole or in part, into a
+     commercial product or service.
+
+  2. Using this software to operate a service for third parties,
+     whether paid or free.
+
+  3. Redistributing this software or derivative works of this
+     software as a standalone product or service.
+
+Benchmark results you produce by running this software on your own
+skills and models are yours. You may publish and use them without
+restriction, including for commercial purposes.
+
+SkillGate routes and injects skill documents into LLM prompts and
+verifies outputs against declared rules. It does not control LLM
+behavior directly and does not guarantee that any LLM will comply
+with injected instructions. Measured figures in this repository
+were obtained under the specific conditions stated alongside them
+and do not constitute a guarantee of performance.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES,
+OR OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
+
+For commercial licensing inquiries, open an issue on this repository.
