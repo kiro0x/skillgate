@@ -105,6 +105,7 @@ python bench/run_bench.py --skills 20 --turn 30 --model qwen3:8b
 - 開発の物語（note）：（公開後にリンク追加）
 - 技術解説（Zenn）：（公開後にリンク追加）
 - 同作者のキャラクター一貫性エンジン：[FIVE](https://fiveengine.dev)
+- 同作者の台帳装置：[Memory Guardian](https://github.com/kiro0x/memory-guardian)（記憶の統治）／[Sycophancy Cancel](https://github.com/kiro0x/sycophancy-cancel)（迎合の出口検品）
 
 ## ライセンス
 
